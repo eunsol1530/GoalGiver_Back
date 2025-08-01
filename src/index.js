@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(morgan('combined'));
   app.use(
     helmet({
-      contentSecurityPolicy: false,
+      contentSecurityPolicy: true, // Enabled CSP
       crossOriginEmbedderPolicy: false,
       crossOriginResourcePolicy: false,
     })
